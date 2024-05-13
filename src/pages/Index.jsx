@@ -20,11 +20,11 @@ const Index = () => {
 
   return (
     <Box p={5} maxW="container.md" mx="auto">
-      <Heading mb={4} textAlign="center">Latest Hacker News Stories</Heading>
+      <Heading mb={4} textAlign="center" style={{ color: "brand.800" }}>Latest Hacker News Stories</Heading>
       <VStack spacing={4} align="stretch">
         {stories.map(story => (
-          <Box key={story.id} p={5} shadow="md" borderWidth="1px" borderRadius="lg" bg={isLargerThan480 ? "gray.100" : "white"}>
-            <Link href={story.url} isExternal color="teal.500" fontWeight="bold">
+          <Box key={story.id} p={5} shadow="md" borderWidth="1px" borderRadius="lg" bg={isLargerThan480 ? "brand.700" : "brand.800"}>
+            <Link href={story.url} isExternal color="brand.900" fontWeight="bold">
               {story.title}
             </Link>
             <Text mt={2}>By {story.by}</Text>
